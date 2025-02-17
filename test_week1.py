@@ -44,6 +44,6 @@ def test_preclass_notempty():
     foldername = 'preclass_assignment'  # name of folder
     # when
     p = Path(foldername)  # create a pathlib.Path object, which has useful methods
-    contents = list(p.glob('*.py'))  # get list of all py files
+    contents = list(p.glob('*.ipynb'))  # get list of all py files
     # then
     assert len(contents) > 0  # throw error if list is empty (length 0)
