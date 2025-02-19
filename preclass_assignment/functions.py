@@ -7,15 +7,19 @@ def greet(name):        #Defining the function
 
 def goldilocks(bedsize):      #Defining the function
     if bedsize > 150:   #A check to see if the bed is to big
-        print('The bed was to big, Goldilocks was not happy!!')   #Text printet in a scenario where the bed is to big
+        print('The bed was too big, Goldilocks was not happy!!')   #Text printet in a scenario where the bed is to big
     elif bedsize < 140:     #A check to see if the bed is to small
-        print('The bed was to small, Goldilocks was not happy!!') #Text printet in a scenario where the bed is to samll
+        print('The bed was too small, Goldilocks was not happy!!') #Text printet in a scenario where the bed is to samll
     else:       #If not to big or to small, the size must be perfect
         print('Goldilocks was happy, and would have extented her gratitude, if she was not slepping already.')  #Text printet in a scenario where the bed is perfect
 
 
 def square_list(numbers): #Defining the function
-    print(np.square(numbers)) #Squaring the numbers
+    x =np.square(numbers) #Squaring the numbers
+    return x
+
+# def square_list(numbers):
+#     return np.square(numbers)  # Fix: return instead of print
 
 
 def fibonacci_stop(number): #Defining the function
