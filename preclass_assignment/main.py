@@ -13,8 +13,8 @@ print('\nAs nither the giants nor the dwarfs could satisfy Goldilocks, a third p
 fun.goldilocks(145)
 
 print("\n\nFunction 3\n")
-print("In the square list the input of [1,2,3,4,5] is testet")
-fun.square_list([1,2,3,4,5])
+print("In the square list the input of [1,4,9] is testet")
+fun.square_list([1,4,9])
 
 print("\n\nFunction 4\n")
 print("The fibonacci code is testet with the input of 30")
@@ -22,4 +22,4 @@ fun.fibonacci_stop(30)
 
 print("\n\nFunction 5\n")
 print("The wether funktion is testet with the imput:\n x = [-1, 2, 6, 95]\n status = [1, 0, 0, 0]")
-fun.clean_pitch([-1, 2, 6, 95, 77, 100],[1, 0, 0, 0, 1, 0])
+fun.clean_pitch([-1, 2, 6, 95,],[1, 0, 0, 0,])
