@@ -1,7 +1,7 @@
 """Test your functions from Week 2 assignment.
 """
 import functions as fun
-
+import numpy as np 
 
 def test_greet(capsys):
     """Check that the greet function prints as expected"""
@@ -24,17 +24,17 @@ def test_goldilocks(capsys):
     captured= capsys.readouterr()
 
     # then
-    assert captured.out== 'The bed was to small, Goldilocks was not happy!!\n '  # ! Update the contents of this function so it correctly tests goldilocks
+    assert captured.out== 'The bed was too small, Goldilocks was not happy!!\n'  # ! Update the contents of this function so it correctly tests goldilocks
 
 def test_goldilocks_all(capsys):
     """Check goldilocks returns expected output"""
     # given
     bed_sizes = [139, 140, 151, 150]  # bed sizes
     expected_outputs = [
+        'The bed was too small, Goldilocks was not happy!!\n',
+        'Goldilocks was happy, and would have extented her gratitude, if she was not slepping already.\n',
         'The bed was too big, Goldilocks was not happy!!\n',
-        'Goldilocks was happy, and would have extended her gratitude, if she was not sleeping already.\n',
-        'The bed was too big, Goldilocks was not happy!!\n',
-        'The bed was too big, Goldilocks was not happy!!\n'
+        'Goldilocks was happy, and would have extented her gratitude, if she was not slepping already.\n'
     ]
 
     # when & then
