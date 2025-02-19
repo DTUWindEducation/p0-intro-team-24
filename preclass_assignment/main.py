@@ -13,8 +13,8 @@ print('\nAs nither the giants nor the dwarfs could satisfy Goldilocks, a third p
 fun.goldilocks(145)
 
 print("\n\nFunction 3\n")
-print("In the square list the input of [1,4,9] is testet")
-fun.square_list([1,4,9])
+print("In the square list the input of [1,2,3] is testet")
+fun.square_list([1,2,3])
 
 print("\n\nFunction 4\n")
 print("The fibonacci code is testet with the input of 30")
