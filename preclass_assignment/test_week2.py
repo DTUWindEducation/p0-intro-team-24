@@ -1,6 +1,6 @@
 """Test your functions from Week 2 assignment.
 """
-import functions as fxn
+import functions as fun
 
 
 def test_greet(capsys):
@@ -8,7 +8,7 @@ def test_greet(capsys):
     # given
     name = 'world'  # who should we greet?
     # when
-    fxn.greet(name)  # greet them
+    fun.greet(name)  # greet them
     captured = capsys.readouterr()  # capture what would have been printed to screen
     # then
     assert captured.out == 'Hello, world!\n'  # check that the greeting was what we expect
@@ -20,7 +20,7 @@ def test_goldilocks(capsys):
     # given
     inp= 139 # bed size
     # when
-    fxn.goldilocks(inp)
+    fun.goldilocks(inp)
     captured= capsys.readouterr()
 
     # then
@@ -39,7 +39,7 @@ def test_goldilocks_all(capsys):
 
     # when & then
     for size, expected in zip(bed_sizes, expected_outputs):
-        fxn.goldilocks(size)  
+        fun.goldilocks(size)  
         captured = capsys.readouterr()
         assert captured.out == expected, f"For bed size {size}, expected '{expected.strip()}' but got '{captured.out.strip()}'"
 
@@ -51,7 +51,7 @@ def test_square_list():
     inp = [1, 2, 3]  # test input to function
     exp_out = [1, 4, 9]  # expected output
     # when
-    out = fxn.square_list(inp)  # actual output
+    out = fun.square_list(inp)  # actual output
     # then
     assert exp_out == out  # throw error if actual and expected output don't match
 
@@ -64,7 +64,7 @@ def test_fibonacci_stop():
     inp= [30]#number when the function stops
     exp_outp= [1, 1, 2, 3, 5, 8, 13, 21] # spected output
     #when
-    out=fxn.fibonacci_stop(inp)
+    out=fun.fibonacci_stop(inp)
     # then
     assert exp_outp==out  # TODO! Update the contents of this function so it correctly tests fibonacci_stop
 
@@ -87,7 +87,7 @@ def test_clean_pitch():
     exp_out = [-999, 2, 6, 95]  
     
     # when
-    out = fxn.clean_pitch(inp_x, inp_status)  
+    out = fun.clean_pitch(inp_x, inp_status)  
     
     # then
     assert exp_out == out  
