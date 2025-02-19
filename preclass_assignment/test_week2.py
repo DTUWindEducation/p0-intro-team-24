@@ -1,6 +1,6 @@
 """Test your functions from Week 2 assignment.
 """
-import preclass_assignment.functions as fxn
+import functions as fxn
 
 
 def test_greet(capsys):
@@ -24,7 +24,25 @@ def test_goldilocks(capsys):
     captured= capsys.readouterr()
 
     # then
-    assert captured.out== 'too small\n '  # ! Update the contents of this function so it correctly tests goldilocks
+    assert captured.out== 'The bed was to small, Goldilocks was not happy!!\n '  # ! Update the contents of this function so it correctly tests goldilocks
+
+def test_goldilocks_all(capsys):
+    """Check goldilocks returns expected output"""
+    # given
+    bed_sizes = [139, 140, 151, 150]  # bed sizes
+    expected_outputs = [
+        'The bed was too big, Goldilocks was not happy!!\n',
+        'Goldilocks was happy, and would have extended her gratitude, if she was not sleeping already.\n',
+        'The bed was too big, Goldilocks was not happy!!\n',
+        'The bed was too big, Goldilocks was not happy!!\n'
+    ]
+
+    # when & then
+    for size, expected in zip(bed_sizes, expected_outputs):
+        fxn.goldilocks(size)  
+        captured = capsys.readouterr()
+        assert captured.out == expected, f"For bed size {size}, expected '{expected.strip()}' but got '{captured.out.strip()}'"
+
 
 
 def test_square_list():
