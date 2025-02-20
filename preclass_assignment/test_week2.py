@@ -53,7 +53,7 @@ def test_square_list():
     # when
     out = fun.square_list(inp)  # actual output
     # then
-    assert exp_out == out  # throw error if actual and expected output don't match
+    assert np.array_equal (exp_out, out)  # throw error if actual and expected output don't match
 
 # this function compares the expected output with the actual output. If it doesn't match it will display an error message.
 
@@ -61,7 +61,7 @@ def test_square_list():
 def test_fibonacci_stop():
     """Check fibonacci functions works as expected."""
     # given
-    inp= [30]#number when the function stops
+    inp= 30 #number when the function stops
     exp_outp= [1, 1, 2, 3, 5, 8, 13, 21] # spected output
     #when
     out=fun.fibonacci_stop(inp)

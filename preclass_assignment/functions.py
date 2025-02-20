@@ -36,7 +36,7 @@ def fibonacci_stop(number): #Defining the function
     
     fibonacci_array = [item for item in array if item is not None]  #Removing all the excess empty values from the list
     del fibonacci_array[count-1]                                    #Deleting the last value in the list, as it has surpased the inputnumper
-    print(fibonacci_array)              #Printing the fibonacci list
+    return fibonacci_array             #Printing the fibonacci list
 
 
 def clean_pitch(x,status):  #Defining the function
@@ -45,4 +45,4 @@ def clean_pitch(x,status):  #Defining the function
         if x[i] > 90 or x[i] < 0:   #Checking if the value in the list is out of the bounderies
             if status[i] > 0:       #Checking if the status showed a mistake
                 x[i] = -999         #If both are true, change the value to -999 to show that something is wrong
-    print(x)            #Print the new list of data
+    return x            #Print the new list of data
